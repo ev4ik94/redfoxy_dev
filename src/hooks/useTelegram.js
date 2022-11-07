@@ -6,9 +6,6 @@ export default function useTelegram(){
         tg.close()
     }
 
-    const ready = ()=>{
-        tg.ready()
-    }
 
     const onToggleButton = ()=>{
         if(tg.MainButton.isVisible){
@@ -18,5 +15,5 @@ export default function useTelegram(){
         }
     }
 
-    return {onClose, ready, tg, user: tg?.initDataUnsafe?.user, onToggleButton}
+    return {onClose, tg, user: tg?.initDataUnsafe?.user, onToggleButton}
 }
