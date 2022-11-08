@@ -59,7 +59,7 @@ export default function ProductList(){
            },
            body: JSON.stringify(data)
        })
-    }, [city, street, subject])
+    }, [addItem])
 
     useEffect(()=>{
         tg.onEvent('mainButtonClicked', onSendData)
