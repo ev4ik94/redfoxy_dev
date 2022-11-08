@@ -35,7 +35,7 @@ const products = [
 ]
 
 const totalPrice = (items)=>{
-    return item.reduce((acc, item)=>{
+    return items.reduce((acc, item)=>{
         return acc+=item.price
     }, 0)
 }
