@@ -51,6 +51,9 @@ export default function ProductList(){
             totalPrice: totalPrice(addItem),
             queryId
         }
+        tg.MainButton.setParams({
+            text: `Загрузка ...`
+        })
 
        fetch('https://radiant-escarpment-13675.herokuapp.com/web-data', {
            method: 'POST',
@@ -58,6 +61,8 @@ export default function ProductList(){
                'Content-Type': 'application/json'
            },
            body: JSON.stringify(data)
+       }).catch(e=>{
+           tg.MainButton.hide()
        })
     }, [addItem])
 
