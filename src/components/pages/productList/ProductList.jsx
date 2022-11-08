@@ -52,7 +52,7 @@ export default function ProductList(){
             queryId
         }
 
-       fetch('http://localhost:8000', {
+       fetch('https://radiant-escarpment-13675.herokuapp.com', {
            method: 'POST',
            headers: {
                'Content-Type': 'application/json'
