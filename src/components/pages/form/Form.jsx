@@ -26,7 +26,7 @@ export default function Form(){
         return ()=>{
             tg.ofEvent('mainButtonClicked', onSendData)
         }
-    }, [])
+    }, [onSendData])
 
     useEffect(()=>{
        tg.MainButton.setParams({
